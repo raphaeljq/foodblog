@@ -29,8 +29,8 @@ const BlogPostTemplate = ({ data, location }) => {
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
-             <GatsbyImage image={image} alt={post.frontmatter.thumbnail} />
-             <p>{post.frontmatter.thumbnail}</p>
+             <img src={post.frontmatter.thumbnail} alt={post.frontmatter.thumbnail} />
+             
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
