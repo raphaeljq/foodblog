@@ -1,16 +1,21 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
+
 const BlogPostTemplate = ({ data, location }) => {
+  
   const post = data.markdownRemark
+ 
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
-
+  const image = getImage(post.frontmatter.thumbnail)
   return (
+    
     <Layout location={location} title={siteTitle}>
       <Seo
         title={post.frontmatter.title}
@@ -24,6 +29,8 @@ const BlogPostTemplate = ({ data, location }) => {
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
+             <GatsbyImage image={image} alt={post.frontmatter.thumbnail} />
+             <p>{post.frontmatter.thumbnail}</p>
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -85,6 +92,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        thumbnail 
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
