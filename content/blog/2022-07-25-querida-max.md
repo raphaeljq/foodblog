@@ -2,7 +2,7 @@
 layout: blog
 title: Querida Max
 date: 2022-07-25T00:43:37.951Z
-thumbnail: /images/1.png
+thumbnail: /images/1-2.png
 ---
 Querida Maxine. Sinto muito por seu irmão Billy. Tenho certeza que fez o seu melhor. Foi a melhor irmã possível, não consigo ficar sem dizer isso e peço, não se culpe. Por outro lado fico feliz que tenha lidado com essa dor de frente. Achei muito corajoso o que você fez quando descobriu sobre a maldição. Eu acho que teria feito bem diferente. Certamente eu travaria e ficaria ali no meu quarto lamentando. Entendo que era pouco tempo.\
 \
